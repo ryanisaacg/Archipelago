@@ -16,9 +16,7 @@ GAME_SM = "Super Metroid"
 GAME_SOE = "Secret of Evermore"
 GAME_SMZ3 = "SMZ3"
 GAME_DKC3 = "Donkey Kong Country 3"
-
 GAME_SMW = "Super Mario World"
-
 
 
 class RomMeta(TypedDict):
