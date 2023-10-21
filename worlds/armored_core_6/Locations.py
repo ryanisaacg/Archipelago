@@ -4,7 +4,7 @@ class ArmoredCore6Location(Location):
     game = "Armored Core 6"
 
 locations = [
-    [ 'Illegal Entry', "mission", "Chapter 1", [  ] ],
+    [ 'Illegal Entry', "mission", "Tutorial", [  ] ],
     [ 'Destroy Artillery Installations', "mission", "Chapter 1", [  ] ],
     [ 'Grid 135 Cleanup', "mission", "Chapter 1", [  ] ],
     [ 'Destroy the Transport Helicopters', "mission", "Chapter 1", [  ] ],

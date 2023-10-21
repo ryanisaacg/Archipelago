@@ -1,8 +1,8 @@
-from typing import Dict, List
+from typing import Dict, List, cast
 from BaseClasses import ItemClassification, MultiWorld, Region
 from worlds.AutoWorld import World
 from .Items import ArmoredCore6Item, items
-from .Locations import ArmoredCore6Location
+from .Locations import ArmoredCore6Location, locations
 
 # TODO: what is a webworld and do I need one?
 
@@ -32,7 +32,10 @@ class ArmoredCore6World(World):
 
     def create_items(self):
         for item in items:
-            self.multiworld.itempool.append(self._create_item(item))
+            if type(item) is list:
+                self.multiworld.itempool.append(self._create_item(item[0]))
+            else:
+                self.multiworld.itempool.append(self._create_item(cast(str, item)))
 
     def _create_item(self, name: str):
         # TODO: second parameter
@@ -40,9 +43,10 @@ class ArmoredCore6World(World):
         return ArmoredCore6Item(name, ItemClassification.progression, self.item_name_to_id[name], self.player)
 
     def create_regions(self):
+        location_names = [location[0] for location in locations]
         # TODO: source from locations file
         self.multiworld.regions += [
-            self._create_region("Tutorial", ["Illegal Entry"]),
+            self._create_region("Menu", location_names),
         ];
 
         # TODO: make connections?
