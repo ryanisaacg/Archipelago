@@ -58,16 +58,17 @@ items = [
     ["hunter 5", False, False, False, 7],
     ["analysis", False, False, False, 8],
     ["analysis 2", True, False, True, 8],
-    ["", False, False, False, 8],
-    ["escape", False, True, False, ],
-    ["", False, False, False, 8],
     ["escape", False, True, False, 8],
-    ["escape 2", False, False, False, 8],
+    ["escape 2", False, True, False, 8],
     ["escape 3", False, False, False, 8],
     ["escape 4", False, False, False, 8],
     ["escape 5", False, False, False, 8],
-    ["escape 6", False, False, True, 8],
+    ["escape 6", False, False, False, 8],
+    ["escape 7", False, False, True, 8],
     ["ending", False, False, False, 9],
     ["ending 2", False, False, False, 9],
     ["ending 3", False, False, False, 9],
-]
+] + \
+["os tuning"] * 10 + \
+['Arena F', 'Arena E', 'Arena D', 'Arena C', 'Arena B', 'Arena A', 'Arena S'] + \
+['Chapter 1', 'Chapter 2', 'Chapter 3', 'Chapter 4', 'Chapter 5', 'NG+', 'NG++']
